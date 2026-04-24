@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-medical-blue: #0f172a;
+  --color-soft-white: #f8fafc;
+  --color-teal-accent: #0d9488;
+  --color-teal-600: #0d9488;
+  --color-slate-50: #f8fafc;
+  --color-slate-200: #e2e8f0;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900 antialiased font-sans;
+  }
+}
+
+@layer components {
+  .bento-card {
+    @apply bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden transition-all hover:shadow-md;
+  }
+  .btn-primary {
+    @apply bg-medical-blue text-white px-8 py-3 rounded-xl font-bold transition-all hover:bg-slate-800 hover:scale-[1.02] active:scale-95;
+  }
+  .btn-teal {
+    @apply bg-teal-600 text-white px-8 py-3 rounded-xl font-bold transition-all hover:bg-teal-700 hover:scale-[1.02] active:scale-95 shadow-lg shadow-teal-600/20;
+  }
+}
